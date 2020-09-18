@@ -1,0 +1,162 @@
+* {
+	border:none;
+	margin:none;
+}
+
+a{
+	text-decoration: none;
+	width: 200px;
+	color:black;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+audio {
+	width: 0px; 
+	height: 0px; 
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+button {
+	display: block; 
+	margin: 20px auto;
+	border-radius: 10px;
+	font-size: 24px;
+	padding: 5px 15px;
+	width: 200px;
+}
+
+body {
+	background-color: grey;
+}
+
+.window {
+	background-color: black;
+	margin: auto;
+	height: 550px;
+	width: 900px;
+	position: relative;
+	bottom: 80%;
+	padding:10px;
+}
+
+.title {
+	background-image: url(../Resources/PacmanTitle.png);
+	height: 200px; 
+	width: 900px;
+	margin: 0 auto;
+}
+
+.animationGrid {
+	height:100px;
+	width:900px; 
+	background-color: black;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.pacman {
+	height:40px;
+	width:40px; 
+	position: relative;
+	top:25%;
+	left:-40px;
+	animation: pac 12s linear infinite, pcR 1000ms ease infinite;
+}
+
+.pacman1 {
+	height: 40px;
+	width: 40px; 
+	position: relative;
+	top:25%;
+	left:-80px;
+	animation: pac 12s linear infinite reverse, pcL 1000ms ease infinite;
+}
+
+.blinky {
+	height: 40px;
+	width: 40px; 
+	position: relative;
+	top:25%;
+	left:-80px;
+	background-image: url(../Resources/WblinkyR.png);
+	animation:blinkyR 12s ease-in infinite;
+}
+
+.blinky1 {
+	height: 40px;
+	width: 40px; 
+	position: relative;
+	top:25%;
+	left:-80px;
+	background-image: url(../Resources/WblinkyL.png);
+	animation:blinkyL 12s ease-in infinite;
+}
+
+@keyframes pac {
+	0%{
+		transform: translateX(-140px);
+	}
+	100%{
+		transform: translateX(2100px);
+	}
+}
+
+@keyframes pcR {
+	0%{
+		background-image: url(../Resources/WpmR0.png);
+	}
+	25%{
+		background-image: url(../Resources/WpmR1.png);
+	}
+	50%{
+		background-image: url(../Resources/WpmR2.png);
+	}
+	75%{
+		background-image: url(../Resources/WpmR3.png);
+	}
+	100%{
+		background-image: url(../Resources/WpmR0.png);
+	}
+}
+
+@keyframes pcL {
+	0%{
+		background-image: url(../Resources/WpmL0.png);
+	}
+	25%{
+		background-image: url(../Resources/WpmL1.png);
+	}
+	50%{
+		background-image: url(../Resources/WpmL2.png);
+	}
+	75%{
+		background-image: url(../Resources/WpmL3.png);
+	}
+	100%{
+		background-image: url(../Resources/WpmL0.png);
+	}
+}
+
+@keyframes blinkyR {
+	0%{
+		transform: translateX(-70px);
+	}
+	100%{
+		transform: translateX(3000px);
+	}
+}
+
+@keyframes blinkyL {
+	0%{
+		transform: translateX(2000px);
+	}
+	100%{
+		transform: translateX(-70px);
+	}
+}

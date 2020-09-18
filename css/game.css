@@ -1,0 +1,99 @@
+* {
+	padding: 0; 
+	margin:0 ;
+	border:none;
+	box-sizing: border-box;
+}
+
+.window {
+	margin: auto; 
+	background-color: black;
+	width:900px;
+	height:580px; 
+	align-content: center; 
+	padding: 10px; 
+}
+
+.scoreTxt {
+	margin: auto auto 5px auto;
+	font-size: 26px; 
+	background-color: black; 
+	color: white;
+	padding: 5px auto;
+	text-align: center; 
+	width:420px;
+}
+
+.highscore {
+	margin: auto;
+	font-size: 18px; 
+	background-color: black; 
+	color: white;
+	padding: 10px auto 0 auto;
+	text-align: center; 
+	width:420px;
+}
+
+.lives {
+	margin: auto;
+	font-size: 24px; 
+	background-color: black; 
+	color: white;
+	padding: 10px;
+	text-align: left; 
+	width:420px;
+}
+
+.pause {
+	color: red;
+	text-emphasis: bold;
+	position: absolute;
+	font-size: 24px;
+	bottom: 50%;
+	right: 50%;
+	transform: translate(50%, 25%);
+}
+
+.grid {
+	width: 420px; 
+	height: 465px;
+	margin: auto;
+	background-image: url(../Resources/background.png);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.grid div {
+	width:15px;
+	height: 15px;
+}
+
+.wall {
+	width:15px;
+	height: 15px
+}
+
+.foodS {
+	background-image: url(../Resources/food10.png);
+}
+
+.foodB {
+	background-image: url(../Resources/food50.png);
+}
+
+.pacman {
+	background-image: url(../Resources/pmL0.png);
+}
+
+.ghost{
+	background-image: url(../Resources/blinkyD.png);
+}
+
+@media screen and (min-height: 800px)
+{ 
+	.window {
+		position: relative;
+		top: 50%;
+		transform: translateY(25%);
+	}
+}
